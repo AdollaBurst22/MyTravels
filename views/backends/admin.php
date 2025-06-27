@@ -6,11 +6,11 @@ include "../../app/user.php";
 include "../../app/post.php";
 
 session_start();
-
+/*
 if(!isset($_SESSION['check-user'])){
     header("location: ./Login.php");
 }
-
+*/
 
 $db = new DB();
 $connection = $db->connect();

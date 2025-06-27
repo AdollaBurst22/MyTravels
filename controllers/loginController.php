@@ -44,9 +44,11 @@ if(isset($_POST['email'])){
     }
 }
 
+/*
 if($_GET['page']=="logout"){
     unset($_SESSION['check-user']);
     header("location: ../views/backends/Login.php");
 }
+*/
 
 ?>
