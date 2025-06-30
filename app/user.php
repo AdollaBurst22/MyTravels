@@ -8,10 +8,11 @@ class user{
     
     public function create($username,$email,$password){
         try{
+            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
             $status = $this->conn->prepare("INSERT INTO users (username,email,password) VALUES (:username,:email,:password)");
             $status->bindParam(":username",$username);
             $status->bindParam(":email",$email);
-            $status->bindParam(":password",$password);
+            $status->bindParam(":password",$hashed_password);
             $status->execute();
 
         return true;
@@ -47,10 +48,11 @@ class user{
     }
     public function updateuser($username,$email,$password,$id){
         try{
+            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
             $status = $this->conn->prepare("UPDATE users SET username=:username,email=:email,password=:password WHERE id=:id");
             $status->bindParam(":username",$username);
             $status->bindParam(":email",$email);
-            $status->bindParam(":password",$password);
+            $status->bindParam(":password",$hashed_password);
             $status->bindParam(":id",$id);
             $status->execute();
 

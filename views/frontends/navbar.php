@@ -17,9 +17,6 @@
         <li class="nav-item">
           <a class="nav-link text-white" href="#content"> <i class="fa-solid fa-signs-post"></i> Post</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#"> <i class="fa-solid fa-right-to-bracket"></i> LogIn</a>
-        </li>
         
       </ul>
     </div>
