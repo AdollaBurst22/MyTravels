@@ -80,3 +80,5 @@ if(isset($_GET['page'])){
 
 <?php
 include "footer.php";
+
+//route to admin page => localhost/MyTravels/views/backends/admin.php
